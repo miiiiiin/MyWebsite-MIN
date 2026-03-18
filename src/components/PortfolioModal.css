@@ -4,14 +4,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.05); /* Light gray tint with low opacity */
+  background: rgba(200, 200, 200, 0.2); /* Light gray wash */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 40px;
-  backdrop-filter: blur(20px); /* Heavier blur for premium look */
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .modal-container {
@@ -20,13 +20,14 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  background: rgba(255, 255, 255, 0.03); /* Extremely transparent */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.9); /* 90% opacity as requested */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
   border-radius: 32px;
   animation: modalPop 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #000; /* Default text color to black */
 }
 
 @keyframes modalPop {
@@ -38,9 +39,9 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -54,8 +55,8 @@
 }
 
 .modal-close:hover {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
   transform: rotate(90deg) scale(1.1);
 }
 
@@ -68,14 +69,12 @@
   width: 100%;
   height: 450px;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .modal-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s ease;
 }
 
 .modal-body {
@@ -94,14 +93,14 @@
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 40px;
-  color: #fff;
+  color: #000;
   line-height: 1.1;
   letter-spacing: -2px;
 }
 
 .description-section h3, .tech-section h3 {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -110,7 +109,7 @@
 
 .full-description {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   line-height: 1.7;
   margin-bottom: 50px;
   font-weight: 400;
@@ -124,39 +123,39 @@
 }
 
 .tech-tag {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 22px;
   border-radius: 40px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.7);
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .tech-tag:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
 .view-project-btn {
   display: inline-flex;
   align-items: center;
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
   padding: 18px 45px;
   border-radius: 50px;
   font-weight: 800;
   text-decoration: none;
   font-size: 1.1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .view-project-btn:hover {
-  background: #f0f0f0;
+  background: #222;
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .arrow {
