@@ -5,7 +5,6 @@ const Hero = () => {
   return (
     <section className="hero container" id="home">
       <div className="hero-content">
-        <div className="badge">iOS-to-Backend Transition</div>
         <h1>
           클라이언트의 마음을 읽어내는 <br />
           <span className="accent">백엔드 개발자</span>, OOO입니다.
