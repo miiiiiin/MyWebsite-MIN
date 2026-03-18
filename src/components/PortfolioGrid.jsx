@@ -7,8 +7,8 @@ const PortfolioGrid = ({ onProjectSelect }) => {
     <section className="portfolio-grid-section" id="work">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Case Studies</h2>
-          <p className="section-subtitle">A collection of my recent work across various disciplines.</p>
+          <h2 className="accent">Portfolio</h2>
+          <div className="line"></div>
         </div>
         
         <div className="portfolio-grid">
