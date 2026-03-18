@@ -3,7 +3,7 @@ export const portfolioData = [
     id: 1,
     title: 'FAST FOOD',
     category: 'Editorial + Print Design',
-    shortDescription: 'Modern editorial design for a fast-food brand. This is a longer description to test if the card height adjusts dynamically based on the amount of content provided in each individual card within the grid layout.',
+    shortDescription: 'Modern editorial design for a fast-food brand.',
     fullDescription: "A comprehensive editorial and print design project for a modern fast-food brand. This project focused on creating a vibrant, high-energy visual identity that's both professional and appetite-appealing.",
     image: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&q=80&w=800',
     color: '#5e5ce6',
