@@ -1,0 +1,130 @@
+.about {
+  padding: 100px 0;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.section-header .line {
+  height: 1px;
+  background: var(--glass-border);
+  flex: 1;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-main, .experience, .education {
+  padding: 2.5rem;
+}
+
+.about-main p {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.about-main strong {
+  color: var(--text-main);
+}
+
+.about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.exp-item {
+  border-left: 2px solid var(--primary);
+  padding-left: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.exp-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.exp-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+}
+
+.edu-item {
+  margin-bottom: 1.2rem;
+}
+
+.edu-item p {
+  margin-bottom: 0.2rem;
+}
+
+.skills-section h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background: rgba(240, 246, 252, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: rgba(0, 210, 255, 0.05);
+}
+
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
