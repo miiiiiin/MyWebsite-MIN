@@ -1,0 +1,129 @@
+.portfolio-slider-section {
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.slider-container {
+  width: 100%;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 3rem;
+  animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.project-ticket {
+  flex-shrink: 0;
+  width: 420px;
+  height: 520px;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--primary-accent);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(94, 92, 230, 0.1);
+}
+
+/* Misty/Scattered Effect Overlay */
+.project-ticket::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(191, 90, 242, 0.2) 0%, transparent 60%);
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.project-ticket:hover::before {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.project-ticket:hover {
+  transform: scale(1.02) translateY(-10px);
+  box-shadow: 0 40px 80px rgba(94, 92, 230, 0.2);
+}
+
+.ticket-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.category {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--primary-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+.project-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-accent);
+  margin-top: 0.5rem;
+  filter: drop-shadow(0 0 10px rgba(94, 92, 230, 0.3));
+}
+
+.ticket-visual {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(94, 92, 230, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.visual-placeholder {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--primary-accent) 0%, transparent 70%);
+  opacity: 0.15;
+  filter: blur(30px);
+}
+
+/* Ticket Cutouts */
+.ticket-cutout {
+  position: absolute;
+  top: 15%;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  border: 2px solid var(--primary-accent);
+  z-index: 5;
+}
+
+.ticket-cutout.left { left: -22px; }
+.ticket-cutout.right { right: -22px; }

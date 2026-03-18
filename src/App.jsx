@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import PortfolioSlider from './components/PortfolioSlider';
 import './App.css';
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <PortfolioSlider />
         <About />
-        {/* Portfolio section will be added in the next phase */}
       </main>
     </div>
   );

@@ -1,89 +1,60 @@
-.hero {
-  height: 100vh;
+.hero-ref {
+  min-height: 90vh;
   display: flex;
   align-items: center;
+  padding-top: 120px;
+}
+
+.hero-layout-ref {
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
-  padding-top: var(--nav-height);
 }
 
-.hero-content {
-  flex: 1.2;
+.hero-headline {
+  font-size: 6rem;
+  max-width: 900px;
+  color: var(--primary-accent);
 }
 
-.badge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 210, 255, 0.1);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  border-radius: 20px;
-  font-size: 0.85rem;
+.hero-subtext {
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 2rem;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  font-weight: 800;
-}
-
-.hero p {
   color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 2.5rem;
-  max-width: 600px;
+  margin-top: 2rem;
 }
 
-.hero-btns {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.btn-secondary {
-  border: 1px solid var(--glass-border);
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.btn-secondary:hover {
-  background: var(--glass-border);
-}
-
-.hero-visual {
-  flex: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.visual-circle {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-  filter: blur(40px);
-  z-index: -1;
-}
-
-.visual-card {
-  padding: 2.5rem;
+.hero-banner-ref {
   width: 100%;
+  max-width: 800px;
+  padding: 2rem;
   font-family: 'Fira Code', monospace;
-  font-size: 0.9rem;
-  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
-  transition: var(--transition);
+  font-size: 1.1rem;
+  align-self: center;
+  transform: translateY(20px);
 }
 
-.visual-card:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+.banner-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.code-purple { color: #d73a49; }
-.code-blue { color: #005cc5; }
-.code-yellow { color: #e36209; }
-.code-green { color: #22863a; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+.banner-title { margin-left: auto; font-size: 0.8rem; color: var(--text-muted); opacity: 0.5; }
+
+.code-p { color: #5e5ce6; font-weight: 700; }
+.code-k { color: #bf5af2; }
+.code-c { color: #007aff; }
+.code-s { color: #34c759; }
+.code-m { color: #ff9500; }
+
+@media (max-width: 1024px) {
+  .hero-headline { font-size: 4rem; }
+}

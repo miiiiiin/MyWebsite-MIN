@@ -3,17 +3,16 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar glass-panel">
-      <div className="container nav-content">
-        <div className="logo">
-          <span className="accent">Backend</span>.Dev
+    <nav className="navbar-ref">
+      <div className="container nav-content-ref">
+        <div className="logo-ref">SONG.MIN</div>
+        <div className="nav-links-ref">
+          <a href="#home">home</a>
+          <a href="#work">portfolio</a>
+          <a href="#blog">blog</a>
+          <a href="#about">about</a>
+          <a href="#contact" className="get-in-touch">Get in touch</a>
         </div>
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact" className="btn-primary">Contact</a></li>
-        </ul>
       </div>
     </nav>
   );
