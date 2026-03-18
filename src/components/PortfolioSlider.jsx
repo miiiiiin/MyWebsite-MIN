@@ -1,28 +1,29 @@
 import React from 'react';
+import { portfolioData } from '../data/portfolioData';
 import './PortfolioSlider.css';
 
-const PortfolioSlider = () => {
-  const projects = [
-    { title: 'FAST FOOD', category: 'Editorial + Print Design', color: '#5e5ce6' },
-    { title: 'MUKHWAS', category: 'Packaging Redesign', color: '#bf5af2' },
-    { title: 'BACKEND API', category: 'System Architecture', color: '#007aff' },
-    { title: 'IOS APP', category: 'Mobile Development', color: '#ff9500' }
-  ];
-
+const PortfolioSlider = ({ onProjectSelect }) => {
   return (
-    <section className="portfolio-slider-section" id="work">
+    <section className="portfolio-slider-section" id="home-work">
       <div className="slider-container">
         <div className="marquee">
           <div className="marquee-content">
-            {[...projects, ...projects].map((project, index) => (
-              <div key={index} className="project-ticket glass-panel">
+            {[...portfolioData, ...portfolioData].map((project, index) => (
+              <div 
+                key={`${project.id}-${index}`} 
+                className="project-ticket glass-panel"
+                onClick={() => onProjectSelect && onProjectSelect(project)}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className="ticket-header">
                   <span className="category">{project.category}</span>
                   <h3 className="project-title">{project.title}</h3>
                 </div>
-                <div className="ticket-visual">
-                  {/* Placeholder for project image/visual */}
-                  <div className="visual-placeholder"></div>
+                <div className="ticket-visual" style={{ backgroundColor: project.color + '22' }}>
+                  <img src={project.image} alt={project.title} className="project-preview-image" />
+                </div>
+                <div className="ticket-footer">
+                   <p className="short-desc">{project.shortDescription}</p>
                 </div>
                 <div className="ticket-cutout left"></div>
                 <div className="ticket-cutout right"></div>
