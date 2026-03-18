@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onContactClick }) => {
   return (
     <nav className="navbar-ref">
       <div className="container nav-content-ref">
@@ -11,7 +11,7 @@ const Navbar = () => {
           <a href="#work">portfolio</a>
           <a href="https://miiiiiin-devlog.tistory.com/" target="_blank" rel="noopener noreferrer">blog</a>
           <a href="#about">about</a>
-          <a href="#contact" className="get-in-touch">Get in touch</a>
+          <a href="#contact" className="get-in-touch" onClick={onContactClick}>Get in touch</a>
         </div>
       </div>
     </nav>
