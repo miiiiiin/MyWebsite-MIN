@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="nav-links-ref">
           <a href="#home">home</a>
           <a href="#work">portfolio</a>
-          <a href="#blog">blog</a>
+          <a href="https://miiiiiin-devlog.tistory.com/" target="_blank" rel="noopener noreferrer">blog</a>
           <a href="#about">about</a>
           <a href="#contact" className="get-in-touch">Get in touch</a>
         </div>
