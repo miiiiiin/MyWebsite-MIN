@@ -1,16 +1,37 @@
-# React + Vite
+# 백엔드 개발자 포트폴리오 웹사이트 (iOS to Backend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 프로젝트는 3년 차 iOS 개발자에서 Spring Boot 백엔드 개발자로 직무를 전환하는 과정과 기술력을 보여주기 위한 포트폴리오 웹사이트입니다.
 
-Currently, two official plugins are available:
+## 🚀 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. 프리미엄 디자인 & UX
+- **글래스모피즘(Glassmorphism)**: 투명한 유리 질감과 빛 번짐 효과를 활용한 모던하고 세련된 UI.
+- **다크 모드**: 딥 네이비와 일렉트릭 사이언 액센트를 활용한 고대비 디자인.
+- **반응형 레이아웃**: 데스크탑부터 모바일까지 최적화된 화면 제공.
 
-## React Compiler
+### 2. 스마트 AI 어시스턴트 (챗봇)
+- 사용자의 질문에 답하는 부동형 챗봇 인터페이스.
+- **이력서 자동화**: "이력서 보여줘"와 같은 명령어를 통해 이력서(PDF) 자동 출력 기능 지원.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. 직무 전환 스토리텔링
+- iOS 개발 경험을 기반으로 한 클라이언트 중심의 API 설계 및 협업 능력 강조.
+- 시스템 아카텍처 시뮬레이션 및 트러블슈팅 사례 중심의 포트폴리오 구성.
 
-## Expanding the ESLint configuration
+## 🛠 기술 스택
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Vite, Vanilla CSS
+- **Design Concepts**: Glassmorphism, Micro-interactions
+- **Key Focus**: 성능 최적화, 테스트 코드(TDD), 아키텍처 설계
+
+## 📦 시작하기
+
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+```
+
+## 📄 라이선스
+이 프로젝트는 개인 포트폴리오 용도로 제작되었습니다.
