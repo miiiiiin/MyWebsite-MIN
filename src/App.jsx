@@ -6,6 +6,7 @@ import PortfolioSlider from './components/PortfolioSlider';
 import PortfolioGrid from './components/PortfolioGrid';
 import PortfolioModal from './components/PortfolioModal';
 import ContactModal from './components/ContactModal';
+import ChatBot from './components/ChatBot/ChatBot';
 import './App.css';
 
 function App() {
@@ -42,12 +43,13 @@ function App() {
         <PortfolioGrid onProjectSelect={openModal} />
         <About />
       </main>
-      
+
       {selectedProject && (
         <PortfolioModal project={selectedProject} onClose={closeModal} />
       )}
 
       <ContactModal isOpen={isContactOpen} onClose={closeContact} />
+      <ChatBot />
     </div>
   );
 }

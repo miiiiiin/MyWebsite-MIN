@@ -1,0 +1,81 @@
+.chat-input-wrap {
+    border-top: 1px solid rgba(94, 92, 230, 0.12);
+    padding: 10px 14px;
+    background: rgba(243, 243, 247, 0.7);
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
+}
+
+.input-row.input-disabled {
+    opacity: 0.5;
+}
+
+.input-prompt {
+    font-family: 'Fira Code', monospace;
+    font-size: 11.5px;
+    color: #bf5af2;
+    white-space: nowrap;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    color: #1d1d1f;
+    caret-color: #5e5ce6;
+    min-width: 0;
+}
+
+.terminal-input::placeholder {
+    color: #c7c7cc;
+    font-style: italic;
+}
+
+.terminal-input:disabled {
+    cursor: not-allowed;
+}
+
+.send-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    background: var(--primary, #5e5ce6);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    transition: background 0.15s, transform 0.1s, opacity 0.15s;
+}
+
+.send-btn svg {
+    width: 13px;
+    height: 13px;
+}
+
+.send-btn:hover:not(:disabled) {
+    background: #4a48c8;
+    transform: scale(1.05);
+}
+
+.send-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.send-btn:disabled {
+    background: #c7c7cc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}

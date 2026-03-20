@@ -1,0 +1,87 @@
+.msg-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    animation: msg-in 0.2s ease;
+}
+
+@keyframes msg-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.msg-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.msg-prefix {
+    font-size: 11px;
+    font-family: 'Fira Code', monospace;
+    white-space: nowrap;
+}
+
+.prefix-bot {
+    color: #27c93f;
+}
+
+.prefix-user {
+    color: #bf5af2;
+}
+
+.msg-time {
+    font-size: 10px;
+    color: #c7c7cc;
+    font-family: 'Fira Code', monospace;
+}
+
+/* ── Bubbles ── */
+.msg-bubble {
+    font-size: 13px;
+    line-height: 1.65;
+    padding: 9px 13px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    word-break: break-word;
+    max-width: 100%;
+    color: #1d1d1f;
+}
+
+.bubble-bot {
+    background: rgba(94, 92, 230, 0.05);
+    border: 1px solid rgba(94, 92, 230, 0.12);
+    border-radius: 2px 8px 8px 8px;
+    align-self: flex-start;
+}
+
+.bubble-user {
+    background: rgba(191, 90, 242, 0.06);
+    border: 1px solid rgba(191, 90, 242, 0.18);
+    border-radius: 8px 2px 8px 8px;
+    align-self: flex-end;
+    margin-left: auto;
+    max-width: 85%;
+}
+
+/* ── Inline tokens ── */
+.inline-code {
+    background: rgba(94, 92, 230, 0.1);
+    color: #5e5ce6;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Fira Code', monospace;
+}
+
+.inline-bold {
+    color: #1d1d1f;
+    font-weight: 600;
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+.chatbot-root {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    font-family: 'Fira Code', monospace;
+}
+
+.chatbot-fab {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary, #5e5ce6);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    box-shadow:
+        0 4px 20px rgba(94, 92, 230, 0.4),
+        0 0 0 0 rgba(94, 92, 230, 0.3);
+    animation: fab-pulse 3s ease-in-out infinite;
+}
+
+.chatbot-fab:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow:
+        0 8px 30px rgba(94, 92, 230, 0.5),
+        0 0 0 4px rgba(94, 92, 230, 0.12);
+}
+
+.chatbot-fab:active {
+    transform: scale(0.96);
+}
+
+.chatbot-fab.fab-active {
+    background: #3a3880;
+    animation: none;
+    box-shadow: 0 4px 20px rgba(94, 92, 230, 0.3);
+}
+
+.fab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.fab-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.fab-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    background: #ff5f56;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: badge-ping 1.5s ease-in-out infinite;
+}
+
+@keyframes fab-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 20px rgba(94, 92, 230, 0.4), 0 0 0 0 rgba(94, 92, 230, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 4px 28px rgba(94, 92, 230, 0.55), 0 0 0 6px rgba(94, 92, 230, 0.08);
+    }
+}
+
+@keyframes badge-ping {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 0.7;
+    }
+}
