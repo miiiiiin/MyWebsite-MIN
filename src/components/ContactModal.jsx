@@ -21,9 +21,9 @@ const ContactModal = ({ isOpen, onClose }) => {
     e.preventDefault();
     // In a real app, you'd send this to a backend or use an email service
     // For now, we'll use mailto: and simulate a success state
-    const mailtoLink = `mailto:skm0922@naver.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    const mailtoLink = `mailto:min.songkyung@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
     window.location.href = mailtoLink;
-    
+
     setIsSent(true);
     setTimeout(() => {
       setIsSent(false);
@@ -35,7 +35,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     <div className="contact-overlay" onClick={onClose}>
       <div className="contact-container glass-panel" onClick={(e) => e.stopPropagation()}>
         <button className="contact-close" onClick={onClose}>×</button>
-        
+
         <div className="contact-content">
           <div className="contact-header">
             <h2 className="accent">Get in touch</h2>
@@ -46,44 +46,44 @@ const ContactModal = ({ isOpen, onClose }) => {
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>Name</label>
-                <input 
-                  type="text" 
-                  name="name" 
-                  placeholder="Your Name" 
-                  required 
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
                   value={formData.name}
                   onChange={handleChange}
                 />
               </div>
               <div className="form-group">
                 <label>Email</label>
-                <input 
-                  type="email" 
-                  name="email" 
-                  placeholder="your.email@example.com" 
-                  required 
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your.email@example.com"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                 />
               </div>
               <div className="form-group">
                 <label>Subject</label>
-                <input 
-                  type="text" 
-                  name="subject" 
-                  placeholder="What is this about?" 
-                  required 
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="What is this about?"
+                  required
                   value={formData.subject}
                   onChange={handleChange}
                 />
               </div>
               <div className="form-group">
                 <label>Message</label>
-                <textarea 
-                  name="message" 
-                  rows="5" 
-                  placeholder="Tell me more about your project..." 
-                  required 
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me more about your project..."
+                  required
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>

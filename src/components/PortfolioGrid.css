@@ -3,6 +3,7 @@
   background: transparent;
 }
 
+
 .section-header {
   margin-bottom: 3rem;
   display: flex;
@@ -116,12 +117,12 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--primary, #5e5ce6); /* Match Portfolio menu accent color */
 }
 
 .card-description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000; /* Black for visibility */
   line-height: 1.6;
 }
 

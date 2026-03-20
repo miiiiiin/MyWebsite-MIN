@@ -127,3 +127,16 @@
 
 .ticket-cutout.left { left: -22px; }
 .ticket-cutout.right { right: -22px; }
+
+.ticket-footer {
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.short-desc {
+  font-size: 1rem;
+  color: #000; /* Black for visibility */
+  line-height: 1.5;
+  font-weight: 500;
+}
