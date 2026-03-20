@@ -11,7 +11,7 @@ const Navbar = ({ onContactClick }) => {
           <a href="#work">portfolio</a>
           <a href="https://miiiiiin-devlog.tistory.com/" target="_blank" rel="noopener noreferrer">blog</a>
           <a href="#about">about</a>
-          <a href="#contact" className="get-in-touch" onClick={onContactClick}>Get in touch</a>
+          <a href="#contact" className="get-in-touch" onClick={onContactClick}>Contact</a>
         </div>
       </div>
     </nav>

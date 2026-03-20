@@ -38,8 +38,8 @@ const ContactModal = ({ isOpen, onClose }) => {
 
         <div className="contact-content">
           <div className="contact-header">
-            <h2 className="accent">Get in touch</h2>
-            <p className="contact-subtitle">Have a project in mind? Let's talk about it.</p>
+            <h2 className="accent">Contact</h2>
+            <p className="contact-subtitle">Have any questions? Feel free to reach out.</p>
           </div>
 
           {!isSent ? (

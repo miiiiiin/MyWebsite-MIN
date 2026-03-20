@@ -79,9 +79,8 @@
   margin-bottom: 0.2rem;
 }
 
-.skills-section h3 {
-  text-align: center;
-  margin-bottom: 3rem;
+.skills-section {
+  margin-top: 20px; /* Adjust top spacing if needed */
 }
 
 .skills-grid {

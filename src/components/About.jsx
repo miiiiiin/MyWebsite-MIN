@@ -59,7 +59,10 @@ const About = () => {
       </div>
 
       <div className="skills-section">
-        <h3>Technical Skills</h3>
+        <div className="section-header">
+          <h2 className="accent">Technical Skills</h2>
+          <div className="line"></div>
+        </div>
         <div className="skills-grid">
           {skillGroups.map((group, index) => (
             <div key={index} className="skill-card glass-panel">
