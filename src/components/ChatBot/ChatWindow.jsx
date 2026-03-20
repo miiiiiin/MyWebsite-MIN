@@ -59,7 +59,8 @@ export default function ChatWindow({ onClose }) {
                 ...prev,
                 { id: Date.now().toString() + '_bot', role: 'bot', text: reply, timestamp: new Date() },
             ]);
-        } catch {
+        } catch (error) {
+            console.error('Chat connection error:', error);
             setMessages(prev => [
                 ...prev,
                 { id: 'err', role: 'bot', text: '⚠ 연결 오류가 발생했어요. 잠시 후 다시 시도해주세요.', timestamp: new Date() },
