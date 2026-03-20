@@ -6,11 +6,12 @@
 .slider-container {
   width: 100%;
   position: relative;
+  padding: 40px 0; /* Add vertical space for hover transforms to prevent clipping */
 }
 
 .marquee {
   display: flex;
-  overflow: hidden;
+  overflow: visible; /* Changed to visible to let cards pop out */
   user-select: none;
   gap: 2rem;
 }
@@ -19,6 +20,7 @@
   display: flex;
   gap: 3rem;
   animation: scroll-left 40s linear infinite;
+  padding: 20px 0; /* Internal padding for more space */
 }
 
 @keyframes scroll-left {
@@ -29,18 +31,22 @@
 .project-ticket {
   flex-shrink: 0;
   width: 420px;
-  height: 520px;
-  padding: 4rem 2rem;
+  height: 350px; /* Reduced height as image is removed */
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center content vertically */
   position: relative;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  border: 2px solid var(--primary-accent);
+  background: rgba(255, 251, 255, 0.6); /* Slightly more opaque for better bevel look */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Glass border */
+  border-radius: 20px;
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Added bounce for 'pop-out' feel */
   cursor: pointer;
-  box-shadow: 0 20px 40px rgba(94, 92, 230, 0.1);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 /* Misty/Scattered Effect Overlay */
@@ -51,26 +57,30 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at center, rgba(191, 90, 242, 0.2) 0%, transparent 60%);
+  background: radial-gradient(circle at center, rgba(191, 90, 242, 0.15) 0%, transparent 60%);
   filter: blur(40px);
-  opacity: 0.6;
+  opacity: 0.4;
   pointer-events: none;
   transition: var(--transition);
 }
 
 .project-ticket:hover::before {
   transform: scale(1.1);
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .project-ticket:hover {
-  transform: scale(1.02) translateY(-10px);
-  box-shadow: 0 40px 80px rgba(94, 92, 230, 0.2);
+  transform: scale(1.05) translateY(-5px); /* Moderate pop-up */
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.15),
+    0 0 0 2px var(--primary-accent),
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 1);
 }
 
 .ticket-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
   z-index: 2;
 }
@@ -85,32 +95,11 @@
 }
 
 .project-title {
-  font-size: 3rem;
+  font-size: 2.5rem; /* Slightly smaller for better fit */
   font-weight: 900;
   color: var(--primary-accent);
   margin-top: 0.5rem;
   filter: drop-shadow(0 0 10px rgba(94, 92, 230, 0.3));
-}
-
-.ticket-visual {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  border: 1px solid rgba(94, 92, 230, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.visual-placeholder {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, var(--primary-accent) 0%, transparent 70%);
-  opacity: 0.15;
-  filter: blur(30px);
 }
 
 /* Ticket Cutouts */

@@ -23,9 +23,6 @@ const PortfolioSlider = ({ onProjectSelect }) => {
                   <span className="category">{project.category}</span>
                   <h3 className="project-title">{project.title}</h3>
                 </div>
-                <div className="ticket-visual" style={{ backgroundColor: (project.color || '#5e5ce6') + '22' }}>
-                  <img src={project.image_url || project.image} alt={project.title} className="project-preview-image" />
-                </div>
                 <div className="ticket-footer">
                    <p className="short-desc">{project.short_description || project.shortDescription}</p>
                 </div>
