@@ -1,8 +1,14 @@
 import React from 'react';
-import { portfolioData } from '../data/portfolioData';
+import { useProjects } from '../hooks/useProjects';
 import './PortfolioGrid.css';
 
 const PortfolioGrid = ({ onProjectSelect }) => {
+  const { projects, loading } = useProjects();
+
+  if (loading) {
+    return <div className="loading">Loading projects...</div>;
+  }
+
   return (
     <section className="portfolio-grid-section" id="work">
       <div className="container">
@@ -12,14 +18,14 @@ const PortfolioGrid = ({ onProjectSelect }) => {
         </div>
         
         <div className="portfolio-grid">
-          {portfolioData.map((project) => (
+          {projects.map((project) => (
             <div 
               key={project.id} 
               className="portfolio-card glass-panel"
               onClick={() => onProjectSelect && onProjectSelect(project)}
             >
               <div className="card-image-container">
-                <img src={project.image} alt={project.title} className="card-image" />
+                <img src={project.image_url || project.image} alt={project.title} className="card-image" />
                 <div className="card-overlay">
                   <span className="view-details">View Details</span>
                 </div>
@@ -27,7 +33,7 @@ const PortfolioGrid = ({ onProjectSelect }) => {
               <div className="card-content">
                 <span className="card-category" style={{ color: project.color }}>{project.category}</span>
                 <h3 className="card-title">{project.title}</h3>
-                <p className="card-description">{project.shortDescription}</p>
+                <p className="card-description">{project.short_description || project.shortDescription}</p>
               </div>
             </div>
           ))}

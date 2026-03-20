@@ -1,14 +1,18 @@
 import React from 'react';
-import { portfolioData } from '../data/portfolioData';
+import { useProjects } from '../hooks/useProjects';
 import './PortfolioSlider.css';
 
 const PortfolioSlider = ({ onProjectSelect }) => {
+  const { projects, loading } = useProjects();
+
+  if (loading) return null;
+
   return (
     <section className="portfolio-slider-section" id="home-work">
       <div className="slider-container">
         <div className="marquee">
           <div className="marquee-content">
-            {[...portfolioData, ...portfolioData].map((project, index) => (
+            {[...projects, ...projects].map((project, index) => (
               <div 
                 key={`${project.id}-${index}`} 
                 className="project-ticket glass-panel"
@@ -19,11 +23,11 @@ const PortfolioSlider = ({ onProjectSelect }) => {
                   <span className="category">{project.category}</span>
                   <h3 className="project-title">{project.title}</h3>
                 </div>
-                <div className="ticket-visual" style={{ backgroundColor: project.color + '22' }}>
-                  <img src={project.image} alt={project.title} className="project-preview-image" />
+                <div className="ticket-visual" style={{ backgroundColor: (project.color || '#5e5ce6') + '22' }}>
+                  <img src={project.image_url || project.image} alt={project.title} className="project-preview-image" />
                 </div>
                 <div className="ticket-footer">
-                   <p className="short-desc">{project.shortDescription}</p>
+                   <p className="short-desc">{project.short_description || project.shortDescription}</p>
                 </div>
                 <div className="ticket-cutout left"></div>
                 <div className="ticket-cutout right"></div>

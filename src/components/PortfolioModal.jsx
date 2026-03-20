@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import './PortfolioModal.css';
 
 const PortfolioModal = ({ project, onClose }) => {
@@ -12,7 +13,7 @@ const PortfolioModal = ({ project, onClose }) => {
         <div className="modal-content">
           <div className="modal-header">
             <div className="image-wrapper">
-              <img src={project.image} alt={project.title} className="modal-image" />
+              <img src={project.image_url || project.image} alt={project.title} className="modal-image" />
             </div>
           </div>
           
@@ -22,22 +23,38 @@ const PortfolioModal = ({ project, onClose }) => {
             
             <div className="description-section">
               <h3>Overview</h3>
-              <p className="full-description">{project.fullDescription}</p>
+              <div className="full-description markdown-content">
+                <ReactMarkdown>
+                  {project.full_description || project.fullDescription}
+                </ReactMarkdown>
+              </div>
             </div>
             
             <div className="tech-section">
               <h3>Technologies Used</h3>
               <div className="tech-tags">
-                {project.technologies.map((tech, index) => (
+                {(project.technologies || []).map((tech, index) => (
                   <span key={index} className="tech-tag">{tech}</span>
                 ))}
               </div>
             </div>
 
-            <div className="modal-footer">
-              <a href={project.link} className="view-project-btn" target="_blank" rel="noopener noreferrer">
-                View Github <span className="arrow">→</span>
-              </a>
+            <div className="links-section">
+              {project.github_url && (
+                <a href={project.github_url} className="view-project-btn" target="_blank" rel="noopener noreferrer">
+                  Github <span className="arrow">→</span>
+                </a>
+              )}
+              {project.link_url && (
+                <a href={project.link_url} className="view-project-btn" target="_blank" rel="noopener noreferrer">
+                  Live Demo <span className="arrow">→</span>
+                </a>
+              )}
+              {(project.blog_url || []).map((url, idx) => (
+                <a key={idx} href={url} className="view-project-btn" target="_blank" rel="noopener noreferrer">
+                  Blog Post {idx + 1} <span className="arrow">→</span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
